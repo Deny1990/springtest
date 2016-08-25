@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="yuan.spring.boot.test.mapper.AckTradeBlotterMapper" >
+  <resultMap id="BaseResultMap" type="yuan.spring.boot.test.model.AckTradeBlotter" >
+    <id column="ID" property="id" jdbcType="BIGINT" />
+    <result column="APPLY_NO" property="applyNo" jdbcType="VARCHAR" />
+    <result column="ACK_OUTER_TRANS_ID" property="ackOuterTransId" jdbcType="CHAR" />
+    <result column="ACK_NO" property="ackNo" jdbcType="VARCHAR" />
+    <result column="TA_NO" property="taNo" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_NO" property="customerNo" jdbcType="VARCHAR" />
+    <result column="SEAT_NO" property="seatNo" jdbcType="CHAR" />
+    <result column="FROM_BRANCH_CODE" property="fromBranchCode" jdbcType="VARCHAR" />
+    <result column="REGION_CODE" property="regionCode" jdbcType="CHAR" />
+    <result column="ACCPT_MODE" property="accptMode" jdbcType="CHAR" />
+    <result column="INVEST_TYPE" property="investType" jdbcType="CHAR" />
+    <result column="FUND_ACCT" property="fundAcct" jdbcType="CHAR" />
+    <result column="TRADE_ACCT" property="tradeAcct" jdbcType="VARCHAR" />
+    <result column="BANK_NO" property="bankNo" jdbcType="CHAR" />
+    <result column="BANK_ACCT" property="bankAcct" jdbcType="VARCHAR" />
+    <result column="AP_KIND" property="apKind" jdbcType="CHAR" />
+    <result column="FUND_ID" property="fundId" jdbcType="CHAR" />
+    <result column="SUB_QUTY" property="subQuty" jdbcType="DECIMAL" />
+    <result column="SUB_AMOUNT" property="subAmount" jdbcType="DECIMAL" />
+    <result column="APPLY_DATE" property="applyDate" jdbcType="CHAR" />
+    <result column="APPLY_TIME" property="applyTime" jdbcType="CHAR" />
+    <result column="ACK_QUTY" property="ackQuty" jdbcType="DECIMAL" />
+    <result column="ACK_AMOUNT" property="ackAmount" jdbcType="DECIMAL" />
+    <result column="ACK_DATE" property="ackDate" jdbcType="CHAR" />
+    <result column="ACK_NAV" property="ackNav" jdbcType="DECIMAL" />
+    <result column="NAV_DATE" property="navDate" jdbcType="CHAR" />
+    <result column="SHARE_TYPE" property="shareType" jdbcType="CHAR" />
+    <result column="BALANCE" property="balance" jdbcType="DECIMAL" />
+    <result column="CURRENCY_TYPE" property="currencyType" jdbcType="CHAR" />
+    <result column="DISCOUNT_RATE" property="discountRate" jdbcType="DECIMAL" />
+    <result column="ORIG_APP_NO" property="origAppNo" jdbcType="VARCHAR" />
+    <result column="ORIG_ACK_NO" property="origAckNo" jdbcType="VARCHAR" />
+    <result column="OPPOSITE_SEAT_NO" property="oppositeSeatNo" jdbcType="CHAR" />
+    <result column="OPPOSITE_BRANCH_CODE" property="oppositeBranchCode" jdbcType="VARCHAR" />
+    <result column="OPPOSITE_REGION_CODE" property="oppositeRegionCode" jdbcType="VARCHAR" />
+    <result column="OPPOSITE_FUND_ACCT" property="oppositeFundAcct" jdbcType="CHAR" />
+    <result column="OPPOSITE_TRADE_ACCT" property="oppositeTradeAcct" jdbcType="VARCHAR" />
+    <result column="OPPOSITE_FUND_ID" property="oppositeFundId" jdbcType="CHAR" />
+    <result column="OPPOSITE_SHARE_TYPE" property="oppositeShareType" jdbcType="CHAR" />
+    <result column="FINISH_FLAG" property="finishFlag" jdbcType="CHAR" />
+    <result column="FEE" property="fee" jdbcType="DECIMAL" />
+    <result column="AGENCY_FEE" property="agencyFee" jdbcType="DECIMAL" />
+    <result column="REDEEM_FEE" property="redeemFee" jdbcType="DECIMAL" />
+    <result column="TRANSFERM_FEE" property="transfermFee" jdbcType="DECIMAL" />
+    <result column="TRADE_FEE" property="tradeFee" jdbcType="DECIMAL" />
+    <result column="OTHER_FEE" property="otherFee" jdbcType="DECIMAL" />
+    <result column="BACKEND_TOTAL_FEE" property="backendTotalFee" jdbcType="DECIMAL" />
+    <result column="TAX" property="tax" jdbcType="DECIMAL" />
+    <result column="STAMP_DUTY" property="stampDuty" jdbcType="DECIMAL" />
+    <result column="INTEREST" property="interest" jdbcType="DECIMAL" />
+    <result column="INTEREST_TAX" property="interestTax" jdbcType="DECIMAL" />
+    <result column="MELON_MODE" property="melonMode" jdbcType="CHAR" />
+    <result column="DIVIDEND_RATE" property="dividendRate" jdbcType="DECIMAL" />
+    <result column="UNIT_PROFIT" property="unitProfit" jdbcType="DECIMAL" />
+    <result column="BOOKING_DATE" property="bookingDate" jdbcType="CHAR" />
+    <result column="VALID_DAYS" property="validDays" jdbcType="INTEGER" />
+    <result column="FROZEN_CAUSE" property="frozenCause" jdbcType="CHAR" />
+    <result column="FROZEN_BALANCE" property="frozenBalance" jdbcType="DECIMAL" />
+    <result column="FROZEN_AMOUNT" property="frozenAmount" jdbcType="DECIMAL" />
+    <result column="UNFROZEN_BALANCE" property="unfrozenBalance" jdbcType="DECIMAL" />
+    <result column="DETAIL_FLAG" property="detailFlag" jdbcType="CHAR" />
+    <result column="REGISTER_DATE" property="registerDate" jdbcType="CHAR" />
+    <result column="TA_ACK_NO" property="taAckNo" jdbcType="VARCHAR" />
+    <result column="PROTOCOL_NO" property="protocolNo" jdbcType="VARCHAR" />
+    <result column="PROFAIL_FLAG" property="profailFlag" jdbcType="CHAR" />
+    <result column="GAIN_BALANCE" property="gainBalance" jdbcType="DECIMAL" />
+    <result column="TA_FLAG" property="taFlag" jdbcType="CHAR" />
+    <result column="INCOME" property="income" jdbcType="DECIMAL" />
+    <result column="INVEST_INCOME" property="investIncome" jdbcType="DECIMAL" />
+    <result column="INVEST_SHARE" property="investShare" jdbcType="DECIMAL" />
+    <result column="RET_CODE" property="retCode" jdbcType="CHAR" />
+    <result column="RET_MSG" property="retMsg" jdbcType="VARCHAR" />
+    <result column="TARGET_FUND_ACK_QUTY" property="targetFundAckQuty" jdbcType="DECIMAL" />
+    <result column="TRANS_DIRECTION" property="transDirection" jdbcType="CHAR" />
+    <result column="TARGET_FUND_NAV" property="targetFundNav" jdbcType="DECIMAL" />
+    <result column="BRANCH_CODE" property="branchCode" jdbcType="VARCHAR" />
+    <result column="BONUS_UNIT" property="bonusUnit" jdbcType="INTEGER" />
+    <result column="is_delete" property="isDelete" jdbcType="TINYINT" />
+    <result column="created_at" property="createdAt" jdbcType="TIMESTAMP" />
+    <result column="updated_at" property="updatedAt" jdbcType="TIMESTAMP" />
+    <result column="CHANGE_FEE" property="changeFee" jdbcType="DECIMAL" />
+    <result column="RECUPERATE_FEE" property="recuperateFee" jdbcType="DECIMAL" />
+    <result column="CHANGE_AGENCY_FEE" property="changeAgencyFee" jdbcType="DECIMAL" />
+    <result column="RECUPERATE_AGENCY_FEE" property="recuperateAgencyFee" jdbcType="DECIMAL" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    ID, APPLY_NO, ACK_OUTER_TRANS_ID, ACK_NO, TA_NO, CUSTOMER_NO, SEAT_NO, FROM_BRANCH_CODE, 
+    REGION_CODE, ACCPT_MODE, INVEST_TYPE, FUND_ACCT, TRADE_ACCT, BANK_NO, BANK_ACCT, 
+    AP_KIND, FUND_ID, SUB_QUTY, SUB_AMOUNT, APPLY_DATE, APPLY_TIME, ACK_QUTY, ACK_AMOUNT, 
+    ACK_DATE, ACK_NAV, NAV_DATE, SHARE_TYPE, BALANCE, CURRENCY_TYPE, DISCOUNT_RATE, ORIG_APP_NO, 
+    ORIG_ACK_NO, OPPOSITE_SEAT_NO, OPPOSITE_BRANCH_CODE, OPPOSITE_REGION_CODE, OPPOSITE_FUND_ACCT, 
+    OPPOSITE_TRADE_ACCT, OPPOSITE_FUND_ID, OPPOSITE_SHARE_TYPE, FINISH_FLAG, FEE, AGENCY_FEE, 
+    REDEEM_FEE, TRANSFERM_FEE, TRADE_FEE, OTHER_FEE, BACKEND_TOTAL_FEE, TAX, STAMP_DUTY, 
+    INTEREST, INTEREST_TAX, MELON_MODE, DIVIDEND_RATE, UNIT_PROFIT, BOOKING_DATE, VALID_DAYS, 
+    FROZEN_CAUSE, FROZEN_BALANCE, FROZEN_AMOUNT, UNFROZEN_BALANCE, DETAIL_FLAG, REGISTER_DATE, 
+    TA_ACK_NO, PROTOCOL_NO, PROFAIL_FLAG, GAIN_BALANCE, TA_FLAG, INCOME, INVEST_INCOME, 
+    INVEST_SHARE, RET_CODE, RET_MSG, TARGET_FUND_ACK_QUTY, TRANS_DIRECTION, TARGET_FUND_NAV, 
+    BRANCH_CODE, BONUS_UNIT, is_delete, created_at, updated_at, CHANGE_FEE, RECUPERATE_FEE, 
+    CHANGE_AGENCY_FEE, RECUPERATE_AGENCY_FEE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from CCS_ACK_TRADE_BLOTTER
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+
+
+
+    
+</mapper>
