@@ -15,6 +15,7 @@ import yuan.spring.boot.service.UserService;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.BDDMockito.given;
 
 @RunWith(SpringRunner.class)
@@ -29,7 +30,6 @@ public class MyTests {
 
     @Test
     public void exampleTest() {
-        // RemoteService has been injected into the reverser bean
         List<User> userList = new ArrayList<>();
         User user = new User();
         user.setAge(33333);
@@ -42,7 +42,9 @@ public class MyTests {
         user2.setAge(33444333);
         userList2.add(user2);
 
-        assert(users).equals(userList2);
+        assertEquals(userList,userList2);
     }
+
+
 
 }

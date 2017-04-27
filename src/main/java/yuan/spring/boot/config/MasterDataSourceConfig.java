@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = MasterDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "masterSqlSessionFactory")
 public class MasterDataSourceConfig
 {
-    static final String PACKAGE = "yuan.spring.boot.test.mapper.master";
+    static final String PACKAGE = "yuan.spring.boot.mapper.master";
     static final String MAPPER_LOCATION = "classpath:mybatis/master/*.xml";
     @Value("${master.datasource.url}")
     private String url;

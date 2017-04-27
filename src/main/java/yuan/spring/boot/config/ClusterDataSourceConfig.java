@@ -23,7 +23,7 @@ public class ClusterDataSourceConfig
 {
 
     // 精确到 cluster 目录，以便跟其他数据源隔离
-    static final String PACKAGE = "yuan.spring.boot.test.mapper.cluster";
+    static final String PACKAGE = "yuan.spring.boot.mapper.cluster";
     static final String MAPPER_LOCATION = "classpath:mybatis/cluster/*.xml";
 
     @Value("${cluster.datasource.url}")
