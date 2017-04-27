@@ -31,14 +31,14 @@ public class MyTests {
     @Test
     public void exampleTest() {
         List<User> userList = new ArrayList<>();
-        User user = new User();
+        User user = new User("hello","world");
         user.setAge(33333);
         userList.add(user);
         given(this.userService.queryAllUsers()).willReturn(userList);
         List<User> users = userController.getAllUser();
 
         List<User> userList2 = new ArrayList<>();
-        User user2 = new User();
+        User user2 = new User("hello","world");
         user2.setAge(33444333);
         userList2.add(user2);
 
