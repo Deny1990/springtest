@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="yuan.spring.boot.mapper.cluster.CityMapper" >
+    <resultMap id="BaseResultMap" type="yuan.spring.boot.model.City" >
+        <id column="ID" property="id" jdbcType="INTEGER" />
+        <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+        <result column="people_num" property="peopleNum" jdbcType="INTEGER" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, city_name, people_num
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select
+        <include refid="Base_Column_List" />
+        from  city
+        where ID = #{id,jdbcType=BIGINT}
+    </select>
+</mapper>
