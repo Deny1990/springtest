@@ -19,9 +19,8 @@ public class HelloController {
      */
 
     @RequestMapping("/hello")
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+    public String greeting() {
         logger.info("hello");
-        model.addAttribute("name", name);
         return "hello";
     }
 
