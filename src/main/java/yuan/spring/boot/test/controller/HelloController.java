@@ -15,7 +15,7 @@ public class HelloController {
     private Logger logger = Logger.getLogger(HelloController.class);
 
     /*
-    *   http://localhost:8080/hello?name=yuan
+    *   http://localhost:8080/hello
      */
 
     @RequestMapping("/hello")
@@ -23,5 +23,12 @@ public class HelloController {
         logger.info("hello");
         return "hello";
     }
+
+    @RequestMapping("/index")
+    public String greetIndex() {
+        logger.info("index");
+        return "index";
+    }
+
 
 }
