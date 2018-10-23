@@ -40,8 +40,8 @@ public class ZoneService {
 
             StringBuffer provinceBuffer = new StringBuffer();
             StringBuffer cityBuffer = new StringBuffer();
-            provinceBuffer.append("0000");
-            cityBuffer.append("00");
+            provinceBuffer.append(provinceCode).append("0000");
+            cityBuffer.append(cityCode).append("00");
 
             boolean isProvince = provinceBuffer.toString().equals(cityBuffer.toString())
                     && cityBuffer.toString().equals(zone);
